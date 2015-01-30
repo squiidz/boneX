@@ -53,7 +53,7 @@ func main () {
   mux := bonex.New()
   
   // Method takes func (rw Http.ResponseWriter, req *http.Request, args bonex.Args)
-  mux.Get("/home/:id", Handler).Eval(isANumber)
+  mux.Get("/home/:id", Handler)
 
   // Eval bind the params with the first provided function,
   // the second params with the second function, etc ...

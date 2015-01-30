@@ -57,6 +57,7 @@ func main () {
 
   // Eval bind the params with the first provided function,
   // the second params with the second function, etc ...
+  // Eval take func (string) bool as parameters
   mux.Get("/profil/:id/:var", ProfilHandler).Eval(isANumber, biggerThan3)
 
   http.ListenAndServe(":8080", mux)
@@ -69,6 +70,7 @@ func Handler(rw http.ResponseWriter, req *http.Request, args bonex.Args) {
   rw.Write([]byte(val))
 }
 
+// Check if the URL params is a number
 func isANumber(str string) bool {
   if _, err := strconv.AtoI(str); err == nil {
     return true
@@ -76,6 +78,7 @@ func isANumber(str string) bool {
   return false
 }
 
+// Check if the lenght of URL params id bigger than 3 
 func biggerThan3(str string) bool {
   if len(str) > 3 {
     return true

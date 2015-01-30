@@ -13,7 +13,7 @@ in the handler to get the URL params (increasing speed). Also bonex.Route implem
 #### With URL Params
 
 ```
--BenchmarkBoneXMux         2000000               697 ns/op
+-BenchmarkBoneXMux        2000000               697 ns/op
 -BenchmarkHttpRouterMux   5000000               304 ns/op
 -BenchmarkZeusMux         1000000              1232 ns/op
 -BenchmarkGorillaMux      1000000              2071 ns/op
@@ -24,7 +24,7 @@ in the handler to get the URL params (increasing speed). Also bonex.Route implem
 #### Without URL Params
 
 ```
--BenchmarkBoneXMux        10000000               144 ns/op
+-BenchmarkBoneXMux       10000000               144 ns/op
 -BenchmarkHttpRouterMux  10000000               152 ns/op
 -BenchmarkZeusMux         2000000               826 ns/op
 -BenchmarkNetHttpMux      2000000               736 ns/op

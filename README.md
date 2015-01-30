@@ -86,6 +86,7 @@ func biggerThan3(str string) bool {
 ```
 ## TODO
 
+- DOC
 - More Testing
 - Debugging
 - Optimisation
